@@ -1,6 +1,6 @@
-# 🏢 Datahouse AI 顧問團隊 Skill Pack
+# 🏢 Data House AI 顧問團隊 Skill Pack
 
-> 專為 Datahouse 數據顧問服務設計的多角色 Claude Skill Pack，
+> 專為 Data House 數據顧問服務設計的多角色 Claude Skill Pack，
 > 涵蓋從業務開發、數據策略、技術建置到客戶維護的完整顧問工作流程。
 
 ---
