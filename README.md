@@ -1,15 +1,18 @@
 # 🏢 Data House AI 顧問團隊 Skill Pack
 
-> 專為 Data House 數據顧問服務設計的多角色 Claude Skill Pack，
+> 專為 Data House 數據顧問服務設計的多角色 Claude Code Skill Pack（Cowork Plugin 格式），
 > 涵蓋從業務開發、數據策略、技術建置到客戶維護的完整顧問工作流程。
 
 ---
 
 ## 📖 這是什麼？
 
-這套 Skill Pack 把 Claude 變成 Datahouse 的**虛擬顧問團隊**。
+這套 Skill Pack 把 Claude Code 變成 Data House 的**虛擬顧問團隊**。
 每個 Skill 就是一個有明確專業定位、工作流程和輸出格式的 AI 成員。
 根據當前任務階段，自動切換到最合適的角色。
+
+採用 **Cowork Plugin** 格式，放在 `.claude/skills/` 目錄下，
+可直接作為 Claude Code 專案外掛使用。
 
 ---
 
@@ -86,11 +89,10 @@
 ## 📁 檔案結構
 
 ```
-datahouse-skill-pack/
-├── README.md
-├── SETUP.md
-├── SKILL.md                    ← 主 Skill（上傳到 Claude Project 的主體）
-└── agents/
+.claude/
+└── skills/
+    ├── datahouse-consulting-team/
+    │   └── SKILL.md          ← 主 Skill（團隊總覽與觸發規則）
     ├── project-director/SKILL.md
     ├── proposal-analyst/SKILL.md
     ├── data-strategist/SKILL.md
@@ -107,12 +109,18 @@ datahouse-skill-pack/
 
 ## ⚙️ 安裝方式
 
-1. 在 [claude.ai](https://claude.ai) 建立新 **Project**，命名為「Datahouse AI 顧問團隊」
-2. 將 `SKILL.md` 的內容貼入 **Project Instructions**
-3. 將所有 `agents/*/SKILL.md` 的內容依序附加進去（或分開上傳）
-4. 開啟新對話，輸入任何 Datahouse 相關任務，Claude 會自動切換角色
+### 方式一：Cowork Plugin（推薦）
 
-**指定角色的方式：**
+將整個 `.claude/` 目錄複製到你的 Claude Code 專案根目錄：
+
+```bash
+cp -r .claude/ /your-project/
+```
+
+開啟 Claude Code，Skills 會自動載入。輸入任何 Data House 相關任務，Claude 會自動切換角色。
+
+### 方式二：手動指定角色
+
 ```
 請用 proposal-analyst 幫我分析這封客戶詢問信
 用 insight-reporter 幫我寫本月報告，數據如下：...
@@ -126,7 +134,8 @@ datahouse-skill-pack/
 - **上下游銜接**：每個角色的輸出格式是下一個角色需要的輸入
 - **可直接執行**：所有輸出都是「可以直接用」的格式，不是模糊建議
 - **台灣語境優先**：針對台灣電商/中小企業生態優化
+- **Cowork 原生格式**：符合 Claude Code Cowork Plugin 規範，即插即用
 
 ---
 
-*Datahouse 疊塔好思股份有限公司 — datahouse.solutions*
+*Data House 疊塔好思股份有限公司 — datahouse.solutions*

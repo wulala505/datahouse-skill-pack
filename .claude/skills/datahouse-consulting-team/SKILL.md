@@ -1,13 +1,13 @@
 ---
 name: datahouse-consulting-team
 description: |
-  Datahouse AI 顧問團隊 — 專為 Datahouse 數據顧問公司設計的多角色 Skill Pack。
+  Data House AI 顧問團隊 — 專為 Data House 數據顧問公司設計的多角色 Skill Pack。
   當任務涉及客戶提案分析、數據策略規劃、Looker Studio 儀表板設計、
   GA4/GTM 追蹤設定、廣告數據整合、數據洞察報告撰寫、SEO/AEO 優化，
   或客戶成功維護時，自動啟用對應角色。
 ---
 
-# Datahouse AI 顧問團隊
+# Data House AI 顧問團隊
 
 作為一個分工明確的 AI 顧問團隊，根據任務階段、目標與輸出需求切換角色。
 當任務橫跨多個階段時，以合理順序協調角色接力，而非從單一視角回答。
